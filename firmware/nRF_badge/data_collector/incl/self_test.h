@@ -38,7 +38,6 @@ struct
 bool testInternalFlash(void);
 */
 
-
 // adds a mic sample to the thresholding array. It will make
 // THRESH_SAMPLES samples and average them to create a single reading
 void testMicAddSample();
@@ -54,8 +53,9 @@ uint8_t testMicAvg();
 bool testMicAboveThreshold();
 
 
-
-
+// tests the accelerator
+void accel_spi_evt_handler(spi_master_evt_t spi_master_evt);
+void accel_test();
 
 
 void runSelfTests();
